@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4CAF50',
+                        secondary: '#333333',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+    <!-- Header Section -->
+    <header class="bg-primary text-white py-6">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-3xl font-bold">Sefanin Bono</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#home" class="hover:text-gray-300">Home</a></li>
+                    <li><a href="#about" class="hover:text-gray-300">About</a></li>
+                    <li><a href="#projects" class="hover:text-gray-300">Projects</a></li>
+                    <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="h-screen bg-gray-100 flex flex-col justify-center items-center text-center">
+        <h2 class="text-4xl font-bold mb-4">Hi, I'm Sefanin Bono</h2>
+        <p class="text-xl text-gray-700 mb-8">A First-Year BTech Electronics & Communication Engineering Student</p>
+        <button onclick="scrollToSection('about')" class="bg-primary text-white px-6 py-2 rounded hover:bg-green-600 transition">Learn More</button>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">About Me</h2>
+            <p class="text-center text-lg text-gray-600">
+                I’m a first-year Electronics and Communication Engineering student at VIT Vellore. My passion lies in understanding the intricacies of communication systems, microelectronics, and emerging technologies in the field. I am excited to work on hands-on projects that will help me apply my knowledge practically.
+            </p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white p-6 shadow-lg rounded">
+                    <h3 class="text-xl font-bold mb-2">Project 1: Basic Electronics Circuit Design</h3>
+                    <p class="text-gray-600">A project focused on designing a simple circuit using basic electronic components like resistors, capacitors, and transistors.</p>
+                    <a href="#" class="text-primary hover:underline mt-4 block">View Project</a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white p-6 shadow-lg rounded">
+                    <h3 class="text-xl font-bold mb-2">Project 2: Microcontroller-Based Temperature Sensor</h3>
+                    <p class="text-gray-600">A hands-on project where I built a temperature sensor using a microcontroller and displayed readings on an LCD screen.</p>
+                    <a href="#" class="text-primary hover:underline mt-4 block">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">Get in Touch</h2>
+            <form id="contactForm" class="max-w-md mx-auto">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
+                    <input type="text" id="name" class="w-full px-3 py-2 border border-gray-300 rounded" placeholder="Your Name">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+                    <input type="email" id="email" class="w-full px-3 py-2 border border-gray-300 rounded" placeholder="Your Email">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
+                    <textarea id="message" class="w-full px-3 py-2 border border-gray-300 rounded" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="bg-primary text-white px-6 py-2 rounded hover:bg-green-600 transition">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Sefanin Bono. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for smooth scrolling -->
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Form submission alert (for now)
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Message sent! I will get back to you soon.');
+        });
+    </script>
+    <!-- Footer -->
+<footer class="bg-secondary text-white py-6">
+    <div class="container mx-auto text-center">
+        <p>&copy; <span id="year"></span> Sefanin Bono. All Rights Reserved.</p>
+        <p class="mt-2">
+            <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="hover:text-gray-400">LinkedIn</a> |
+            <a href="https://github.com/yourusername" target="_blank" class="hover:text-gray-400">GitHub</a> |
+            <a href="mailto:your.email@example.com" class="hover:text-gray-400">Email</a>
+        </p>
+    </div>
+</footer>
+
+</body>
+
+</html>
